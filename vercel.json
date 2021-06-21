@@ -1,16 +1,4 @@
 {
-  "version": 2,
-  "regions": ["hnd1"],
-  "functions": {
-    "api/index.py": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "routes": [
-    {"src": "/hello", "dest": "api/index.py" },
-    {"src": "/", "dest": "index.html" }
-  ],
   "redirects": [
     {
       "source": "/",
