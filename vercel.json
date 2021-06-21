@@ -1,4 +1,13 @@
 {
+  "routes": [
+    { "src": "/redirect", "status": 308, "headers": { "Location": "https://example.com/" } },
+    { "src": "/custom-page", "headers": {"cache-control": "s-maxage=1000"}, "dest": "/index.html" },
+    { "src": "/users", "methods": ["POST"], "dest": "/users-api.js" },
+    { "src": "/users/(?<id>[^/]*)", "dest": "/users-api.js?id=$id" },
+    { "src": "/q/(?<id>[^/]*)", "dest": "https://www.google.com/search?q=$id" },
+    { "src": "/legacy", "status": 404},
+    { "src": "/.*", "dest": "https://my-old-site.com"}
+  ],
   "redirects": [
     {
       "source": "/",
