@@ -1,6 +1,11 @@
 # python api server run on vercel
 To have your account on https://vercel.com/ first.
 
+# 必要なライブラリを取込
+```
+pip freeze > requirements.txt
+```
+
 # debug on localhost
 ```
 vercel dev
